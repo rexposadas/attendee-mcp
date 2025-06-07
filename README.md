@@ -6,7 +6,7 @@ An MCP server for managing Attendee meeting bots.
 
 ### **1. Build the Package**
 ```bash
-cd /Users/rex/work/ai/attendee-mcp
+cd ${HOME}/attendee-mcp
 npm install
 npm run build
 ```
@@ -27,7 +27,7 @@ Update `~/Library/Application Support/Claude/claude_desktop_config.json`:
     "attendee": {
       "command": "node",
       "args": [
-        "/Users/rex/work/ai/attendee-mcp/dist/index.js"
+        "${HOME}/attendee-mcp/dist/index.js"
       ],
       "env": {
         "MEETING_BOT_API_URL": "<Attendee Server>",
@@ -40,7 +40,7 @@ Update `~/Library/Application Support/Claude/claude_desktop_config.json`:
 
 ### **4. Start Your Local Attendee Server**
 ```bash
-cd /Users/rex/work/ai/attendee
+cd ${HOME}/attendee
 python manage.py runserver
 ```
 
