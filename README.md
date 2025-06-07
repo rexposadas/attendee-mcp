@@ -1,3 +1,5 @@
+**WIP: Still under development** 
+
 # Attendee MCP Server
 
 A Model Context Protocol (MCP) server for managing Attendee meeting bots. This server allows you to create, manage, and retrieve transcripts from meeting bots through Claude Desktop.
