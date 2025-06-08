@@ -140,7 +140,7 @@ MIT License - see LICENSE file for details.
 
 ## 🔗 Related Projects
 
-- [Attendee](https://github.com/rexposadas/attendee) - The main meeting bot service
+- [Attendee](https://github.com/noah-duncan/attendee) - The main meeting bot service
 - [Model Context Protocol](https://github.com/modelcontextprotocol) - The MCP specification and SDK
 
 ---
