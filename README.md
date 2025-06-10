@@ -1,8 +1,10 @@
-
 # Attendee MCP Server
 
 A Model Context Protocol (MCP) server for managing Attendee meeting bots. This server allows you to create, manage, and retrieve transcripts from meeting bots through Claude Desktop.
 
+<a href="https://glama.ai/mcp/servers/@rexposadas/attendee-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@rexposadas/attendee-mcp/badge" alt="Attendee Server MCP server" />
+</a>
 
 # What can you do with this MCP? 
 
@@ -39,7 +41,6 @@ A Model Context Protocol (MCP) server for managing Attendee meeting bots. This s
 10. **"Get chat messages from bot `<bot_id>`"** - Retrieve all chat messages from the meeting
 11. **"Get the recording from bot `<bot_id>`"** - Get download URL for meeting recording
 12. **"Delete all data for bot `<bot_id>`"** - Permanently delete recordings, transcripts, etc.
-
 
 ## Combining MCPs 
 Combining MCPs leads to powerful workflows. For example, I use the Brave Search MCP alongside the Attendee MCP. When I ask Claude, “Who won the last Roland Garros tournament?”, it:
