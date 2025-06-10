@@ -1,4 +1,3 @@
-**WIP: Still under development** 
 
 # Attendee MCP Server
 
