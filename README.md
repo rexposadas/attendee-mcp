@@ -20,7 +20,6 @@ A Model Context Protocol (MCP) server for managing Attendee meeting bots. This s
 - [x] Send chat message
 - [ ] Get list of active bots
 
-
 ## 🎯 What you can do with Claude using this MCP
 
 ### Basic Bot Management
@@ -40,6 +39,13 @@ A Model Context Protocol (MCP) server for managing Attendee meeting bots. This s
 10. **"Get chat messages from bot `<bot_id>`"** - Retrieve all chat messages from the meeting
 11. **"Get the recording from bot `<bot_id>`"** - Get download URL for meeting recording
 12. **"Delete all data for bot `<bot_id>`"** - Permanently delete recordings, transcripts, etc.
+
+
+## Combining MCPs 
+Combining MCPs leads to powerful workflows. For example, I use the Brave Search MCP alongside the Attendee MCP. When I ask Claude, “Who won the last Roland Garros tournament?”, it:
+
+1. Uses the web MCP to find the answer online.
+2. Pipes the result to the Attendee bot, which speaks the answer back to me
 
 ## 🚀 Installation
 
