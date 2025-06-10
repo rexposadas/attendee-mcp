@@ -14,9 +14,13 @@ A Model Context Protocol (MCP) server for managing Attendee meeting bots. This s
 # TODO List
 
 [x] Bot joins meeting
+
 [x] Get bot status
+
 [x] Send speech message (sends audio through the bot)
+
 [x] Send chat message
+
 [ ] Get list of active bots
 
 
