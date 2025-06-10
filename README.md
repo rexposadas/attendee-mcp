@@ -5,12 +5,41 @@
 A Model Context Protocol (MCP) server for managing Attendee meeting bots. This server allows you to create, manage, and retrieve transcripts from meeting bots through Claude Desktop.
 
 
-## Things you request from Claude ( or any other tools where you connect to this MCP server) 
+# What can you do with this MCP? 
 
-1. "Send a bot to this meeting: <provide meeeting url>" -- This will create an Attendee bot and send it to the provided conference URL. 
-2. "Get me the status of the bot" -- This will return the status of the bot you just created.
-3. "list all active bots" (TODO)
-4. "leave the meeting" (TODO)
+1. You can send the bot to a meeting with "Send a bot to this meeting: <meeting_url>"
+2. You can have the bot say something with "Have the bot say <text>", and I will say it in the meeting.
+3. You can have the bot send a chat message with "Have the bot send a chat message: <message>"
+4. You can have the bot leave the meeting with "Have the bot leave the meeting"
+
+# TODO List
+
+[x] Bot joins meeting
+[x] Get bot status
+[x] Send speech message (sends audio through the bot)
+[x] Send chat message
+[ ] Get list of active bots
+
+
+## 🎯 What you can do with Claude using this MCP
+
+### Basic Bot Management
+1. **"Send a bot to this meeting: `<meeting_url>`"** - Creates and sends an Attendee bot to join any meeting (Zoom, Google Meet, Teams)
+2. **"Get me the status of bot `<bot_id>`"** - Returns current status, state, and transcription progress 
+3. **"List all my active bots"** - Shows all currently active meeting bots
+4. **"Remove bot `<bot_id>` from the meeting"** - Makes the bot leave the meeting
+
+### Advanced Bot Features  
+5. **"Make bot `<bot_id>` say 'Hello everyone!'"** - Text-to-speech functionality
+6. **"Send chat message 'Hi there!' from bot `<bot_id>`"** - Send chat messages through the bot
+7. **"Show this image in the meeting: `<image_url>` using bot `<bot_id>`"** - Display images (Google Meet only)
+8. **"Play this video in the meeting: `<video_url>` using bot `<bot_id>`"** - Play MP4 videos (Google Meet only)
+
+### Data Access
+9. **"Get the transcript from bot `<bot_id>`"** - Retrieve meeting transcripts
+10. **"Get chat messages from bot `<bot_id>`"** - Retrieve all chat messages from the meeting
+11. **"Get the recording from bot `<bot_id>`"** - Get download URL for meeting recording
+12. **"Delete all data for bot `<bot_id>`"** - Permanently delete recordings, transcripts, etc.
 
 ## 🚀 Installation
 
@@ -101,11 +130,23 @@ Once configured, you can use natural language commands in Claude Desktop:
 
 This server provides the following tools:
 
+### Core Bot Management
 - **`create_meeting_bot`** - Create a bot to join and record a meeting
 - **`get_bot_status`** - Check the current status of a meeting bot
-- **`get_meeting_transcript`** - Retrieve the transcript from a completed meeting (TODO)
-- **`list_meeting_bots`** - List all active meeting bots (TODO)
-- **`remove_meeting_bot`** - Remove a bot from a meeting (TODO)
+- **`list_meeting_bots`** - List all active meeting bots
+- **`remove_meeting_bot`** - Remove a bot from a meeting
+
+### Communication & Media
+- **`make_bot_speak`** - Make the bot speak using text-to-speech
+- **`send_chat_message`** - Send chat messages from the bot
+- **`send_image_to_meeting`** - Display images through the bot (Google Meet only)
+- **`send_video_to_meeting`** - Play videos through the bot (Google Meet only)
+
+### Data Retrieval
+- **`get_meeting_transcript`** - Retrieve the meeting transcript
+- **`get_chat_messages`** - Get chat messages from the meeting
+- **`get_recording`** - Get the recording download URL
+- **`delete_bot_data`** - Permanently delete all bot data
 
 ## 🐛 Troubleshooting
 
