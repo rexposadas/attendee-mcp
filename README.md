@@ -11,17 +11,14 @@ A Model Context Protocol (MCP) server for managing Attendee meeting bots. This s
 3. You can have the bot send a chat message with "Have the bot send a chat message: <message>"
 4. You can have the bot leave the meeting with "Have the bot leave the meeting"
 
-# TODO List
+# To-Do List
 
-[ x ] Bot joins meeting
-
-[x] Get bot status
-
-[x] Send speech message (sends audio through the bot)
-
-[x] Send chat message
-
-[ ] Get list of active bots
+- [x] Bot joins meeting
+- [x] Bot leaves meeting
+- [x] Get bot status
+- [x] Send speech message (sends audio through the bot)
+- [x] Send chat message
+- [ ] Get list of active bots
 
 
 ## 🎯 What you can do with Claude using this MCP
