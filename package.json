@@ -42,7 +42,8 @@
   "files": [
     "dist/**/*",
     "README.md",
-    "CONFIGURATION.md"
+    "CONFIGURATION.md",
+    "LICENSE"
   ],
   "types": "./dist/index.d.ts"
 }
