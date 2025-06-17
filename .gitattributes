@@ -1,0 +1,16 @@
+# Override GitHub language detection
+*.ts linguist-language=TypeScript
+
+# Exclude generated files from language stats
+dist/* linguist-generated=true
+node_modules/* linguist-vendored=true
+*.d.ts linguist-generated=true
+*.js.map linguist-generated=true
+*.d.ts.map linguist-generated=true
+
+# Mark as TypeScript project
+* linguist-detectable=false
+*.ts linguist-detectable=true
+*.tsx linguist-detectable=true
+package.json linguist-detectable=true
+tsconfig.json linguist-detectable=true

@@ -43,8 +43,7 @@
     "dist/**/*",
     "README.md",
     "CONFIGURATION.md",
-    "examples.js",
-    "test-mcp.js"
+    "LICENSE"
   ],
   "types": "./dist/index.d.ts"
 }

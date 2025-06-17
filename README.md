@@ -1,46 +1,26 @@
 # Attendee MCP Server
 
-A Model Context Protocol (MCP) server for managing Attendee meeting bots. This server allows you to create, manage, and retrieve transcripts from meeting bots through Claude Desktop.
+
 
 <a href="https://glama.ai/mcp/servers/@rexposadas/attendee-mcp">
   <img width="380" height="200" src="https://glama.ai/mcp/servers/@rexposadas/attendee-mcp/badge" alt="Attendee Server MCP server" />
 </a>
 
-# What can you do with this MCP? 
+This is an MCP for sending and managing meeting bots with  [Attendee](https://github.com/attendee-labs/attendee), an open-source meeting bot for recording and transcription. You can run Attendee locally or deploy it to the cloud.
 
-1. You can send the bot to a meeting with "Send a bot to this meeting: <meeting_url>"
-2. You can have the bot say something with "Have the bot say <text>", and I will say it in the meeting.
-3. You can have the bot send a chat message with "Have the bot send a chat message: <message>"
-4. You can have the bot leave the meeting with "Have the bot leave the meeting"
+Questions? Join the Attendee [Slack](https://join.slack.com/t/attendeecommu-rff8300/shared_invite/zt-2uhpam6p2-ZzLAoVrljbL2UEjqdSHrgQ).
 
-# To-Do List
+## Quick Start: What can you do with this MCP? 
 
-- [x] Bot joins meeting
-- [x] Bot leaves meeting
-- [x] Get bot status
-- [x] Send speech message (sends audio through the bot)
-- [x] Send chat message
-- [ ] Get list of active bots
+Using Claude as an example: You can type the following and start working with an AI meeting bot.  
 
-## 🎯 What you can do with Claude using this MCP
+1. "Send a bot to this meeting: <meeting_url>"
+2. "Have the bot speak <message>", and the bot would speak it in the meeting.
+3. "Have the bot send a chat message: <message>"
+4. "Have the bot leave the meeting"
 
-### Basic Bot Management
-1. **"Send a bot to this meeting: `<meeting_url>`"** - Creates and sends an Attendee bot to join any meeting (Zoom, Google Meet, Teams)
-2. **"Get me the status of bot `<bot_id>`"** - Returns current status, state, and transcription progress 
-3. **"List all my active bots"** - Shows all currently active meeting bots
-4. **"Remove bot `<bot_id>` from the meeting"** - Makes the bot leave the meeting
 
-### Advanced Bot Features  
-5. **"Make bot `<bot_id>` say 'Hello everyone!'"** - Text-to-speech functionality
-6. **"Send chat message 'Hi there!' from bot `<bot_id>`"** - Send chat messages through the bot
-7. **"Show this image in the meeting: `<image_url>` using bot `<bot_id>`"** - Display images (Google Meet only)
-8. **"Play this video in the meeting: `<video_url>` using bot `<bot_id>`"** - Play MP4 videos (Google Meet only)
-
-### Data Access
-9. **"Get the transcript from bot `<bot_id>`"** - Retrieve meeting transcripts
-10. **"Get chat messages from bot `<bot_id>`"** - Retrieve all chat messages from the meeting
-11. **"Get the recording from bot `<bot_id>`"** - Get download URL for meeting recording
-12. **"Delete all data for bot `<bot_id>`"** - Permanently delete recordings, transcripts, etc.
+![Claude Bot](assets/images/claude-bot.png)
 
 ## Combining MCPs 
 Combining MCPs leads to powerful workflows. For example, I use the Brave Search MCP alongside the Attendee MCP. When I ask Claude, “Who won the last Roland Garros tournament?”, it:
