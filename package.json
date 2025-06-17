@@ -42,9 +42,7 @@
   "files": [
     "dist/**/*",
     "README.md",
-    "CONFIGURATION.md",
-    "examples.js",
-    "test-mcp.js"
+    "CONFIGURATION.md"
   ],
   "types": "./dist/index.d.ts"
 }
