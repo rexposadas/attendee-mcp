@@ -11,8 +11,8 @@ Questions? Join the Attendee [Slack](https://join.slack.com/t/attendeecommu-rff8
 Using Claude as an example: You can type the following and start working with an AI meeting bot.  
 
 1. "Send a bot to this meeting: <meeting_url>"
-2. "Have the bot speak <message>", and the bot would speak it in the meeting.
-3. "Have the bot send a chat message: <message>"
+2. "Have the bot speak 'Hello'", and the bot would say 'Hello' it in the meeting.
+3. "Have the bot send a chat message: 'Glad to be here'", and the bot would write 'Glad to be here' in the chat.
 4. "Have the bot leave the meeting"
 
 ![Claude Bot](assets/images/claude-bot.png)
