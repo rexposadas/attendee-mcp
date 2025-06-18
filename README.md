@@ -1,6 +1,10 @@
-
 # Attendee MCP Server
 
+
+
+<a href="https://glama.ai/mcp/servers/@rexposadas/attendee-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@rexposadas/attendee-mcp/badge" alt="Attendee Server MCP server" />
+</a>
 
 This is an MCP for sending and managing meeting bots with  [Attendee](https://github.com/attendee-labs/attendee), an open-source meeting bot for recording and transcription. You can run Attendee locally or deploy it to the cloud.
 
@@ -14,6 +18,7 @@ Using Claude as an example: You can type the following and start working with an
 2. "Have the bot speak 'Hello'", and the bot would say 'Hello' it in the meeting.
 3. "Have the bot send a chat message: 'Glad to be here'", and the bot would write 'Glad to be here' in the chat.
 4. "Have the bot leave the meeting"
+
 
 ![Claude Bot](assets/images/claude-bot.png)
 
