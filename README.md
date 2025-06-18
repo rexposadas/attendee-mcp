@@ -1,14 +1,14 @@
 # Attendee MCP Server
 
+This is an MCP for sending and managing meeting bots with  [Attendee](https://github.com/attendee-labs/attendee), an open-source meeting bot for recording and transcription. You can run Attendee locally or deploy it to the cloud.
+
+Questions? Join the Attendee [Slack](https://join.slack.com/t/attendeecommu-rff8300/shared_invite/zt-2uhpam6p2-ZzLAoVrljbL2UEjqdSHrgQ).
 
 
 <a href="https://glama.ai/mcp/servers/@rexposadas/attendee-mcp">
   <img width="380" height="200" src="https://glama.ai/mcp/servers/@rexposadas/attendee-mcp/badge" alt="Attendee Server MCP server" />
 </a>
 
-This is an MCP for sending and managing meeting bots with  [Attendee](https://github.com/attendee-labs/attendee), an open-source meeting bot for recording and transcription. You can run Attendee locally or deploy it to the cloud.
-
-Questions? Join the Attendee [Slack](https://join.slack.com/t/attendeecommu-rff8300/shared_invite/zt-2uhpam6p2-ZzLAoVrljbL2UEjqdSHrgQ).
 
 ## Quick Start: What can you do with this MCP? 
 
