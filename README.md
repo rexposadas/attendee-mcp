@@ -6,7 +6,7 @@ Questions? Join the Attendee [Slack](https://join.slack.com/t/attendeecommu-rff8
 
 
 <a href="https://glama.ai/mcp/servers/@rexposadas/attendee-mcp">
-  <img width="280" height="100" src="https://glama.ai/mcp/servers/@rexposadas/attendee-mcp/badge" alt="Attendee Server MCP server" />
+  <img width="190" height="100" src="https://glama.ai/mcp/servers/@rexposadas/attendee-mcp/badge" alt="Attendee Server MCP server" />
 </a>
 
 
