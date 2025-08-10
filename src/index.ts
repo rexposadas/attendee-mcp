@@ -63,7 +63,7 @@ class MeetingBotMCP {
     this.server = new Server(
       {
         name: "meeting-bot-mcp",
-        version: "1.1.0",
+        version: "1.2.0",
       },
       {
         capabilities: {
@@ -247,15 +247,6 @@ class MeetingBotMCP {
               },
             },
             required: ["bot_id"],
-          },
-        },
-        {
-          name: "list_meeting_bots",
-          description: "List all active meeting bots",
-          inputSchema: {
-            type: "object",
-            properties: {},
-            required: [],
           },
         },
         {
