@@ -13,7 +13,9 @@
     "start": "node dist/index.js",
     "watch": "tsc --watch",
     "clean": "rm -rf dist",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix"
   },
   "keywords": [
     "mcp",
@@ -33,6 +35,9 @@
   "devDependencies": {
     "@types/node": "^20.19.0",
     "@types/node-fetch": "^2.6.12",
+    "@typescript-eslint/eslint-plugin": "^8.34.1",
+    "@typescript-eslint/parser": "^8.34.1",
+    "eslint": "^9.29.0",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   },

@@ -104,8 +104,6 @@ Once configured, you can use natural language commands in Claude Desktop:
 
 ### Managing Bots
 - "What's the status of bot bot_abc123?"
-- "Show me all my active bots"
-- "List all meeting bots"
 - "Remove bot bot_abc123 from the meeting"
 
 ## 🔧 Available MCP Tools
@@ -115,7 +113,6 @@ This server provides the following tools:
 ### Core Bot Management
 - **`create_meeting_bot`** - Create a bot to join and record a meeting
 - **`get_bot_status`** - Check the current status of a meeting bot
-- **`list_meeting_bots`** - List all active meeting bots
 - **`remove_meeting_bot`** - Remove a bot from a meeting
 
 ### Communication & Media

@@ -63,7 +63,7 @@ class MeetingBotMCP {
     this.server = new Server(
       {
         name: "meeting-bot-mcp",
-        version: "1.1.0",
+        version: "1.2.0",
       },
       {
         capabilities: {
@@ -191,8 +191,8 @@ class MeetingBotMCP {
     chatOutput += "─".repeat(50) + "\n";
     
     data.forEach((message: any) => {
-      const timestamp = new Date(message.created_at).toLocaleTimeString();
-      chatOutput += `[${timestamp}] ${message.sender_name}:\n${message.message}\n\n`;
+      const timestamp = new Date(message.timestamp_ms || message.timestamp * 1000).toLocaleTimeString();
+      chatOutput += `[${timestamp}] ${message.sender_name}:\n${message.text}\n\n`;
     });
     
     chatOutput += "─".repeat(50) + `\n📊 Total messages: ${data.length}`;
@@ -247,15 +247,6 @@ class MeetingBotMCP {
               },
             },
             required: ["bot_id"],
-          },
-        },
-        {
-          name: "list_meeting_bots",
-          description: "List all active meeting bots",
-          inputSchema: {
-            type: "object",
-            properties: {},
-            required: [],
           },
         },
         {
@@ -413,9 +404,6 @@ class MeetingBotMCP {
           case "get_meeting_transcript":
             return await this.getMeetingTranscript(args);
 
-          case "list_meeting_bots":
-            return await this.listMeetingBots();
-
           case "remove_meeting_bot":
             return await this.removeMeetingBot(args);
 
@@ -517,41 +505,6 @@ class MeetingBotMCP {
     };
   }
 
-  private async listMeetingBots() {
-    const data = await this.makeApiRequest("/api/v1/bots");
-
-    // Handle both array response and object with bots property
-    const bots = Array.isArray(data) ? data : (data.bots || []);
-
-    if (bots.length === 0) {
-      return {
-        content: [
-          {
-            type: "text",
-            text: "📋 No active meeting bots found.",
-          },
-        ],
-      };
-    }
-
-    const botList = bots
-      .map((bot: any, index: number) => {
-        const stateIcon = (bot.state === 'joining' || bot.state === 'joined' || bot.state === 'joined_recording') ? "✅" : "❌";
-        const transcriptIcon = bot.transcription_state === 'complete' ? "✅" : "⏳";
-        return `${index + 1}. Bot ID: ${bot.id}\n   📊 State: ${bot.state} ${stateIcon}\n   📝 Transcription: ${bot.transcription_state} ${transcriptIcon}\n   🔗 Meeting: ${bot.meeting_url.substring(0, 50)}...`;
-      })
-      .join("\n\n");
-
-    return {
-      content: [
-        {
-          type: "text",
-          text: `📋 Active Meeting Bots (${bots.length}):\n\n${botList}`,
-        },
-      ],
-    };
-  }
-
   private async removeMeetingBot(args: Record<string, unknown>) {
     const bot_id = args.bot_id as string;
     
@@ -646,7 +599,7 @@ class MeetingBotMCP {
       content: [
         {
           type: "text",
-          text: this.formatChatMessages(data, bot_id),
+          text: this.formatChatMessages(data.results || data, bot_id),
         },
       ],
     };
