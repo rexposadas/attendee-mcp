@@ -95,7 +95,6 @@ Ask Claude these questions to verify everything works:
 ```
 ✅ "What MCP tools are available?"
 ✅ "Send a bot to this meeting: https://meet.google.com/test-abc-def"
-✅ "List all my active bots"
 ✅ "Get the status of bot [bot-id]"
 ✅ "Make the bot say 'Hello everyone!'"
 ```
